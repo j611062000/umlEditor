@@ -1,26 +1,25 @@
 package src.integrate.controller.modeController;
 
-import src.interactiveComponents.buttons.SquareButton;
+import java.util.*;
 
 public class ModeController {
-
-    String thisModeName;
     
-    public ModeController(String thisModeName) {
-        this.thisModeName = thisModeName;
+    static Vector<BasicModeController> listOfModeController = new Vector<BasicModeController>();
+
+    ModeController() {
+        initializeModeController();
     }
 
-    public static String getCurrentActiveMode() {
-        return SquareButton.getCurrentActiveButton();
+    static void initializeModeController() {
+        listOfModeController.add(new ClassModeController());
     }
 
-    public boolean thisModeIsActive() {
-        if (this.thisModeName == getCurrentActiveMode()) {
-            return true;
+    public static void mouseActionFromCanvasContainer(Integer mouseXCoordiante, Integer mouseYCoordiante) {
+        for (BasicModeController bmc : listOfModeController) {
+            if (bmc.thisModeIsActive()) {
+                
+                break;
+            }
         }
-        else {
-            return false;
-        }
     }
-
 }

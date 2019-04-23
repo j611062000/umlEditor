@@ -4,6 +4,19 @@
             "type": "java",
             "name": "CodeLens (Launch) - MainController",
             "request": "launch",
+            "mainClass": "integrate.controller.MainController",
+            "projectName": "umlEditor_59f5e4d0"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MainController",
+            "request": "launch",
+            "mainClass": "src.integrate.controller.MainController"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MainController",
+            "request": "launch",
             "mainClass": "src.integrate.controller.MainController",
             "projectName": "unlEditorNCU_db3d9102"
         }

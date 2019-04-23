@@ -1,6 +1,9 @@
 package src.nonInteractiveComponents.containers;
 
 import java.awt.event.*;
+
+import src.integrate.controller.modeController.ModeController;
+
 import java.awt.Color;
 
 public class CanvasContainer extends InnerContainer implements MouseListener, MouseMotionListener{
@@ -24,6 +27,8 @@ public class CanvasContainer extends InnerContainer implements MouseListener, Mo
     public void mouseClicked(MouseEvent e) {
         latestMouseClickXCoordination = e.getX();
         latestMouseClickYCoordination = e.getY();
+        ModeController.mouseActionFromCanvasContainer(latestMouseClickXCoordination, latestMouseClickYCoordination);
+
         }   
 
     public void mousePressed(MouseEvent e) {
